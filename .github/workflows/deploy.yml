@@ -31,10 +31,6 @@ jobs:
           MONGO_INITDB_ROOT_PASSWORD: example
         ports:
           - 27017:27017
-        env:
-          MONGO_INITDB_ROOT_USERNAME: ${{ secrets.MONGODB_USERNAME }}
-          MONGO_INITDB_ROOT_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
-          MONGO_INITDB_DATABASE: ${{ env.MONGODB_DB_NAME }}
     steps:
       - name: Get Code
         uses: actions/checkout@v3
